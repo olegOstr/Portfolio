@@ -1,0 +1,103 @@
+.resume {
+    padding-top: 120px;
+
+    &__inner {
+        padding: 0 65px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 135px;
+    }
+
+    &__col-title {
+        padding-left: 35px;
+        position: relative;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        color: $dark;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -7px;
+            width: 15px;
+            height: 15px;
+            transform: translateY(-50%);
+            border-radius: 100%;
+
+            background-color: $main-color;
+        }
+    }
+
+    &__list-item {
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 1px;
+            height: 100%;
+            position: absolute;
+
+            top: -8px;
+            left: 0;
+            background-color: $dark;
+        }
+    }
+
+    &__item {
+        position: relative;
+        max-width: 375px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 64px;
+            left: 0;
+            width: 42px;
+            height: 1px;
+            background-color: $dark;
+        }
+    }
+
+    &__item-title {
+        @include fontSize14Bold;
+    }
+
+    &__item-descr {
+        @include fontSize12Medium;
+    }
+
+    &__item-header {
+        position: relative;
+        padding-top: 45px;
+        padding-left: 100px;
+    }
+
+    &__item-icon {
+        position: absolute;
+        top: 60px;
+        left: 63px;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 5px;
+            left: -21px;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            border-radius: 100%;
+            background-color: $main-color;
+            z-index: -1;
+        }
+    }
+
+    &__item-text {
+        padding-top: 12px;
+        padding-left: 42px;
+        @include fontSize12Medium;
+    }
+
+}

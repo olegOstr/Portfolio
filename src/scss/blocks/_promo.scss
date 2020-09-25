@@ -1,0 +1,15 @@
+.promo {
+    position: relative;
+    min-height: 100vh;
+    padding: 200px 0 20px 0;
+    background: url(../images/main-bg.jpg) top / cover no-repeat;
+
+    &-wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
+    .main-btn {
+        margin-right: 40px;
+    }
+}

@@ -1,0 +1,104 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+
+    margin: 0;
+    padding: 0;
+
+    transition: .5s all;
+
+    &.active {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+        transition: .5s all;
+    }
+
+    &__inner {
+        position: relative;
+        width: 345px;
+        height: 100%;
+        padding: 140px 0 0 40px;
+        background-color: $main-color;
+        z-index: 100;
+    }
+
+    &__item {
+        padding-left: 35px;
+        margin-bottom: 25px;
+    }
+
+    &__link {
+        position: relative;
+        font-weight: bold;
+        font-size: 24px;
+        color: $white;
+        text-transform: uppercase;
+
+        transition: .3s linear;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -35px;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 1px solid #000000;
+            border-radius: 100%;
+            transition: .3s all;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $white;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        &:hover {
+            &::before {
+                background-color: $white;
+            }
+        }
+    }
+
+    &__social {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &-link:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #fff, $alpha: .7);
+        z-index: 90;
+    }
+}

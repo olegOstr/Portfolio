@@ -1,0 +1,94 @@
+.skills {
+    padding-top: 120px;
+
+    &-cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+    }
+
+    .card__item {
+        min-width: 270px;
+        max-width: 270px;
+        height: 270px;
+        margin: 5px 5px;
+        padding: 30px;
+
+        border: 2px solid $dark;
+        border-radius: 4px;
+
+        transition: .5s all;
+
+        &:hover {
+            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.19),
+                0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        &-img {
+            min-height: 65px;
+            margin-bottom: 15px;
+        }
+
+        &-title {
+            margin-bottom: 15px;
+            @include fontSize14Bold
+        }
+
+        &-text {
+            @include fontSize12Medium
+        }
+
+    }
+
+    &-counter {
+        padding-top: 120px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+
+    }
+
+    .counter__item {
+        margin-bottom: 30px;
+        width: 350px;
+        height: 70px;
+
+        &-top {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-percent {
+            @include fontSize14Bold;
+        }
+
+        &-body {
+            margin-top: 10px;
+            position: relative;
+            width: 350px;
+            height: 14px;
+            overflow: hidden;
+            background: #E8E4DE;
+            border-radius: 4px;
+            z-index: 1;
+
+            transition: .7s all;
+        }
+
+        &-body-percent {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $main-color;
+            border-radius: 4px;
+            z-index: 2;
+            transition: .7s all;
+        }
+
+    }
+
+}

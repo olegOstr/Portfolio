@@ -1,0 +1,24 @@
+$white: #fff;
+$dark: #000;
+$main-color: #FFA501;
+
+@mixin fontSize12Medium {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $dark;
+}
+
+@mixin fontSize14Medium {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $dark;
+}
+
+@mixin fontSize14Bold {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: $dark;
+}
