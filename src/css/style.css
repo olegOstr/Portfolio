@@ -1126,6 +1126,10 @@ body {
   color: #000;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,

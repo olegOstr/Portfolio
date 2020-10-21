@@ -16,6 +16,9 @@ body {
   font-size: 12px;
   color: $dark;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 h1,
 h2,
