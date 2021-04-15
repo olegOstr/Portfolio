@@ -25,14 +25,26 @@
         body.classList.remove('no-scroll')
     });
 
+
+window.addEventListener('scroll', ()=> {
     const percent = document.querySelectorAll('.counter__item-percent');
     const lines = document.querySelectorAll('.counter__item-body-percent');
 
-
+    let scrollDistance = window.scrollY;
 
     percent.forEach((item, i) => {
-        lines[i].style.width = item.innerHTML;
+
+        if(item.offsetTop - document.querySelector('.skills-counter').clientHeight -120 <= scrollDistance) {
+            lines[i].style.width = item.innerHTML;
+        }
     });
+});
+
+
+
+
+
+
 
 
     /* Anchors */

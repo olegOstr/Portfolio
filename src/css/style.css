@@ -2055,9 +2055,6 @@ li {
   background: #E8E4DE;
   border-radius: 4px;
   z-index: 1;
-  -webkit-transition: .7s all;
-  -o-transition: .7s all;
-  transition: .7s all;
 }
 
 .skills .counter__item-body-percent {
@@ -2065,12 +2062,13 @@ li {
   position: absolute;
   top: 0;
   left: 0;
+  width: 0;
   background-color: #FFA501;
   border-radius: 4px;
   z-index: 2;
-  -webkit-transition: .7s all;
-  -o-transition: .7s all;
-  transition: .7s all;
+  -webkit-transition: 1s all cubic-bezier(0, 0.28, 1, 0.88);
+  -o-transition: 1s all cubic-bezier(0, 0.28, 1, 0.88);
+  transition: 1s all cubic-bezier(0, 0.28, 1, 0.88);
 }
 
 .portfolio {
